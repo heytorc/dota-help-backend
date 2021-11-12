@@ -5,7 +5,7 @@ import http from 'http';
 import cors from 'cors';
 import { Server } from 'socket.io';
 
-import routes from './routes';
+import routes from '@/routes';
 
 const app = express();
 const server = http.createServer(app);
