@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon",
-    "start": "ts-node src/server.ts"
+    "start": "tsc && node build/server.js"
   },
   "nodemonConfig": {
     "ignore": [
