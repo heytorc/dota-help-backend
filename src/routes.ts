@@ -6,12 +6,10 @@ const SteamAuth = require("node-steam-openid");
 const host = `${process.env.HOST}:${process.env.PORT}`;
 
 const steam = new SteamAuth({
-  realm: host, // Site name displayed to users on logon
-  returnUrl: `${host}/auth/steam/authenticate`, // Your return route
+  realm: process.env.HOST, // Site name displayed to users on logon
+  returnUrl: `${process.env.HOST}/auth/steam/authenticate`, // Your return route
   apiKey: process.env.STEAM_API_KEY // Steam API key
 });
-
-console.log('host', host);
 
 const routes = Router();
 
