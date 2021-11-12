@@ -3,8 +3,6 @@ require('dotenv').config();
 import { Router } from "express";
 const SteamAuth = require("node-steam-openid");
 
-const host = `${process.env.HOST}:${process.env.PORT}`;
-
 const steam = new SteamAuth({
   realm: process.env.HOST, // Site name displayed to users on logon
   returnUrl: `${process.env.HOST}/auth/steam/authenticate`, // Your return route
@@ -26,7 +24,7 @@ routes.get("/auth/steam/authenticate", async (req, res) => {
 
     io.emit('Backend:UserAuthenticated', user);
 
-    res.sendFile(`${__dirname}/pages/close.html`);
+    res.sendFile('./pages/close.html');
   } catch (error) {
     console.error(error);
   }
