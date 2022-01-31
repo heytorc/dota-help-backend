@@ -5,12 +5,19 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "node",
+      "type": "pwa-node",
       "request": "launch",
       "name": "API",
-      "preLaunchTask": "tsc: build - tsconfig.json",
-      "program": "${workspaceFolder}/src/server.ts",
-      "outputCapture": "std"
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/build/server.js",
+      "outputCapture": "std",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "outFiles": [
+        "${workspaceFolder}/**/*.js",
+        "!**/node_modules/**"
+      ]
     }
   ]
 }

@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-import { steamAPI, dotaImagesAPI } from 'services/axios';
+import { steamAPI, dotaImagesAPI } from '@/services/axios';
 
 const handleHeroes = async () => {
   try {

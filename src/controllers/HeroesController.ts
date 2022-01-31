@@ -1,6 +1,5 @@
 import { Request, Response } from 'express';
-import { handleHeroes, handleHeroImage } from '@/providers/HeroesProvider';
-import fs from 'fs';
+import { handleHeroes } from '@/providers/HeroesProvider';
 
 const getHeroes = async (request: Request, response: Response) => {
   try {
